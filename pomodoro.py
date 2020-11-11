@@ -47,13 +47,13 @@ print(welcoming())
 
 def studying():
     start = datetime.datetime.now()  # The start time
-    ending = start + datetime.timedelta(seconds=5)  # The expected time for the end
+    ending = start + datetime.timedelta(minutes=25)  # The expected time for the end
     while datetime.datetime.now() != ending:  # the current time is not 25 minutes past the start
         continue
     approval = take_break()
     if approval:  # If there's an approval for the break
         start_rest = datetime.datetime.now()  # The beginning of the nap time
-        end_rest = start_rest + datetime.timedelta(seconds=5)
+        end_rest = start_rest + datetime.timedelta(minutes=5)
         while datetime.datetime.now() != end_rest:  # the current time is not 5 minutes past the start of the nap
             continue
         study_approval = restudying()
